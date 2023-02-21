@@ -1,7 +1,6 @@
 -- Tabellen, unverbunden
-
-DROP TABLE IF EXISTS mydb.cats;
 DROP TABLE IF EXISTS mydb.servants;
+DROP TABLE IF EXISTS mydb.cats;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
   `id` INT NOT NULL AUTO_INCREMENT,

@@ -35,7 +35,12 @@ WHERE servant_name = "Daniel"
 
 -- Inner Join 2a / (Wer dient wem?)
 -- "X ist der Diener von Y"  / Dienstverhältnis
-
+SELECT
+	CONCAT(servant_name, " ist der Diener von ", cat_name, ".") AS Dienstverhältnis
+FROM mydb.cats INNER JOIN mydb.servants
+ON mydb.cats.id = mydb.servants.cats_id
+WHERE cat_name = "Mausi"
+;
 
 
 

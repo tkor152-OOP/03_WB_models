@@ -1,6 +1,6 @@
--- Vorbereitungen
-DROP TABLE IF EXISTS mydb.servants;
-DROP TABLE IF EXISTS mydb.cats;
+-- Vorbereitung
+DROP DATABASE IF EXISTS mydb;
+CREATE DATABASE IF NOT EXISTS mydb;
 
 -- Mastertabelle (MT)
 CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
@@ -42,7 +42,7 @@ DESCRIBE mydb.servants;
 
 -- Inhalte: MT
 INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Peter", 5, 1);
-INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Patrick", 3, 1);
+INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Patrick", 3, 3);
 INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Daniel", 4, 2);
 
 -- Inhalte: DT
